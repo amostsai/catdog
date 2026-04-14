@@ -3,145 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>狗狗皮膚護理：預防和治療指南 - 艾新寵物診所</title>
-  <meta name="description" content="狗狗皮膚病的預防、症狀識別及家庭護理方法。">
-  <link rel="stylesheet" href="../css/variables.css">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/responsive.css">
+  <title>狗狗皮膚護理指南</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>body{font-family:'Inter',sans-serif}h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;font-weight:700}</style>
 </head>
-<body>
-  <!-- Header 導航 -->
-  <header>
-    <nav>
-      <div class="logo">🐾 艾新診所</div>
-      <ul class="nav-menu">
-        <li><a href="../index.html">首頁</a></li>
-        <li><a href="../about.html">關於我們</a></li>
-        <li><a href="../services.html">服務項目</a></li>
-        <li><a href="../health-tips.html">科普知識</a></li>
-        <li><a href="../contact.html">聯絡我們</a></li>
+<body class="bg-white">
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold text-emerald-700">🐾 艾新診所</div>
+      <ul class="hidden md:flex gap-8">
+        <li><a href="../index.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">首頁</a></li>
+        <li><a href="../health-tips.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">科普知識</a></li>
       </ul>
-      <button class="mobile-menu-toggle">☰</button>
     </nav>
   </header>
 
-  <!-- 文章內容 -->
-  <article class="container" style="max-width: 800px; margin: 3rem auto;">
-    <h1>🐕 狗狗皮膚護理：預防和治療指南</h1>
-    <p style="color: #7f8c8d; font-size: 0.95rem;">
-      發佈日期：2024 年 4 月 | 作者：李明哲 獸醫
-    </p>
+  <article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <h1 class="text-5xl font-bold text-gray-900 mb-4">🐕 狗狗皮膚護理指南</h1>
+    <p class="text-gray-600 text-lg mb-12">發佈日期：2024年4月 | 作者：李明哲 獸醫</p>
 
-    <h2>狗狗皮膚健康的重要性</h2>
-    <p>
-      皮膚是狗狗最大的器官，也是免疫系統的第一道防線。
-      健康的皮膚不僅能預防疾病，還能提升狗狗的整體生活品質。
-    </p>
+    <div class="prose prose-lg max-w-none text-gray-700 space-y-8">
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 pt-4 border-t-4 border-emerald-600">狗狗皮膚健康的重要性</h2>
+        <p class="leading-relaxed">皮膚是狗狗最大的器官，也是免疫系統的第一道防線。健康的皮膚不僅能預防疾病，還能提升狗狗的整體生活品質。</p>
+      </section>
 
-    <h2>常見的狗狗皮膚問題</h2>
-    <ul style="margin: 1rem 0 1rem 2rem;">
-      <li><strong>過敏症：</strong> 食物過敏、環境過敏</li>
-      <li><strong>寄生蟲：</strong> 跳蚤、蝨子、蟎蟲</li>
-      <li><strong>真菌感染：</strong> 黴菌、癬菌</li>
-      <li><strong>細菌感染：</strong> 皮炎、膿皮症</li>
-      <li><strong>幹性皮膚：</strong> 乾燥、脫屑</li>
-    </ul>
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 pt-4 border-t-4 border-emerald-600">常見的狗狗皮膚問題</h2>
+        <ul class="space-y-4 list-disc list-inside text-lg">
+          <li><strong>過敏症：</strong> 食物過敏、環境過敏</li>
+          <li><strong>寄生蟲：</strong> 跳蚤、蝨子、蟎蟲</li>
+          <li><strong>真菌感染：</strong> 黴菌、癬菌</li>
+          <li><strong>細菌感染：</strong> 皮炎、膿皮症</li>
+          <li><strong>幹性皮膚：</strong> 乾燥、脫屑</li>
+        </ul>
+      </section>
 
-    <h2>皮膚問題的早期警訊</h2>
-    <p>
-      發現以下症狀時應特別注意：
-    </p>
-    <ul style="margin: 1rem 0 1rem 2rem;">
-      <li>過度搔癢或舔舐</li>
-      <li>紅腫、炎症或皮疹</li>
-      <li>掉毛或禿毛</li>
-      <li>皮膚有異味</li>
-      <li>皮膚乾燥或油膩</li>
-      <li>傷口或潰瘍</li>
-    </ul>
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 pt-4 border-t-4 border-emerald-600">皮膚問題的早期警訊</h2>
+        <p class="mb-4">發現以下症狀時應特別注意：</p>
+        <ul class="space-y-3 list-disc list-inside text-lg">
+          <li>過度搔癢或舔舐</li>
+          <li>紅腫、炎症或皮疹</li>
+          <li>掉毛或禿毛</li>
+          <li>皮膚有異味</li>
+          <li>皮膚乾燥或油膩</li>
+          <li>傷口或潰瘍</li>
+        </ul>
+      </section>
 
-    <h2>家庭護理方法</h2>
-    
-    <h3>1. 定期洗澡</h3>
-    <p>
-      使用狗狗專用溫和洗毛精，每 2-4 週洗澡一次。
-      避免過度頻繁的洗澡，以防破壞皮膚的自然油脂平衡。
-    </p>
+      <section class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-12 my-8 border-l-4 border-blue-600">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">🛡️ 家庭護理方法</h3>
+        <div class="space-y-6 text-lg">
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">1. 定期洗澡</h4>
+            <p>使用狗狗專用溫和洗毛精，每2-4週洗澡一次。避免過度頻繁洗澡，以防破壞皮膚的自然油脂。</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">2. 定期梳毛</h4>
+            <p>每週梳毛2-3次可改善血液循環、分散皮膚油脂，並提早發現潛在皮膚問題。</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">3. 寄生蟲預防</h4>
+            <p>定期使用預防性藥物以防止跳蚤、蝨子和蟎蟲感染。</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-2">4. 適當飲食</h4>
+            <p>優質的狗糧富含Omega-3脂肪酸和生物素，有助於維持皮膚和毛髮的健康。</p>
+          </div>
+        </div>
+      </section>
 
-    <h3>2. 定期梳毛</h3>
-    <p>
-      每週梳毛 2-3 次可改善血液循環、分散皮膚油脂，
-      並提早發現潛在的皮膚問題。
-    </p>
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 pt-4 border-t-4 border-emerald-600">何時應該就診？</h2>
+        <ul class="space-y-3 list-disc list-inside text-lg">
+          <li>持續搔癢超過1週</li>
+          <li>皮膚有開放性傷口或膿液</li>
+          <li>大量掉毛或禿毛</li>
+          <li>皮膚異味明顯</li>
+          <li>任何異常的皮膚症狀</li>
+        </ul>
+      </section>
 
-    <h3>3. 寄生蟲預防</h3>
-    <p>
-      定期使用預防性藥物以防止跳蚤、蝨子和蟎蟲感染。
-      根據獸醫建議選擇合適的預防產品。
-    </p>
-
-    <h3>4. 適當飲食</h3>
-    <p>
-      優質的狗糧富含 Omega-3 脂肪酸和生物素，
-      有助於維持皮膚和毛髮的健康。
-    </p>
-
-    <h3>5. 定期獸醫檢查</h3>
-    <p>
-      每年至少進行一次皮膚檢查。
-      某些狗狗可能需要更頻繁的檢查。
-    </p>
-
-    <div class="card" style="background: #d5f4e6; margin: 2rem 0;">
-      <h3 style="color: #2ecc71; margin-top: 0;">💡 預防勝於治療</h3>
-      <p>
-        良好的日常護理能預防大多數皮膚問題。
-        定期洗澡、梳毛和寄生蟲預防是預防皮膚病的三大要素。
-      </p>
+      <div class="bg-emerald-700 text-white rounded-xl p-12 text-center my-12">
+        <h3 class="text-2xl font-bold mb-4">需要皮膚檢查？</h3>
+        <a href="../contact.html" class="inline-block bg-white text-emerald-700 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+          聯絡我們進行皮膚檢查
+        </a>
+      </div>
     </div>
-
-    <h2>何時應該就診？</h2>
-    <p>
-      如果您的狗狗出現以下症狀，應立即預約看診：
-    </p>
-    <ul style="margin: 1rem 0 1rem 2rem;">
-      <li>持續搔癢超過 1 週</li>
-      <li>皮膚有開放性傷口或膿液</li>
-      <li>大量掉毛或禿毛</li>
-      <li>皮膚異味明顯</li>
-      <li>任何異常的皮膚症狀</li>
-    </ul>
-
-    <h2>結論</h2>
-    <p>
-      狗狗皮膚護理是一項持續的投資。
-      通過定期檢查、適當的日常護理和專業的獸醫治療，
-      您可以確保您的毛寶貝擁有健康、舒適的皮膚。
-    </p>
-
-    <h2>想了解更多？</h2>
-    <p style="text-align: center; margin: 2rem 0;">
-      <a href="../contact.html" class="btn">聯絡我們進行皮膚檢查</a>
-    </p>
   </article>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <h4>艾新寵物診所</h4>
-      <p style="margin-bottom: 1rem;">溫暖專業，用心守護每一個毛寶貝</p>
-      <div class="footer-links">
-        <a href="../index.html">首頁</a>
-        <a href="../health-tips.html">科普知識</a>
-        <a href="../contact.html">聯絡我們</a>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 艾新寵物診所。保留所有權利。</p>
-      </div>
+  <footer class="bg-gray-900 text-white py-12 mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-300">&copy; 2024 艾新寵物診所。保留所有權利。</p>
     </div>
   </footer>
-
-  <script src="../js/main.js"></script>
-  <script src="../js/mobile-menu.js"></script>
 </body>
 </html>

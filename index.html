@@ -3,149 +3,263 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>艾新寵物診所 - 溫暖專業的寵物醫療</title>
-  <meta name="description" content="艾新寵物診所 - 為貓狗提供溫暖專業的醫療服務。">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <title>艾新寵物診所 - 溫暖專業的寵物醫療服務</title>
+  <meta name="description" content="艾新寵物診所提供專業的寵物醫療服務、疫苗接種、手術及健康諮詢。">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+    }
+  </style>
 </head>
-<body>
-  <!-- Header 導航 -->
-  <header>
-    <nav>
-      <div class="logo">🐾 艾新診所</div>
-      <ul class="nav-menu">
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="services.html">服務項目</a></li>
-        <li><a href="health-tips.html">科普知識</a></li>
-        <li><a href="contact.html">聯絡我們</a></li>
-      </ul>
-      <button class="mobile-menu-toggle">☰</button>
+<body class="bg-white">
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <div class="text-2xl font-bold text-emerald-700">🐾 艾新診所</div>
+        
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex gap-8 items-center">
+          <li><a href="index.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">首頁</a></li>
+          <li><a href="about.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">關於我們</a></li>
+          <li><a href="services.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">服務項目</a></li>
+          <li><a href="health-tips.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">科普知識</a></li>
+          <li><a href="contact.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">聯絡我們</a></li>
+        </ul>
+        
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-2xl text-gray-800" onclick="toggleMobileMenu()">☰</button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200">
+        <ul class="flex flex-col gap-4 pt-4">
+          <li><a href="index.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">首頁</a></li>
+          <li><a href="about.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">關於我們</a></li>
+          <li><a href="services.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">服務項目</a></li>
+          <li><a href="health-tips.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">科普知識</a></li>
+          <li><a href="contact.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">聯絡我們</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="container">
-      <h1>🐱 🐕 溫暖的醫療，專業的守護</h1>
-      <p>艾新寵物診所 - 為你的毛寶貝提供最好的照護</p>
-      <a href="contact.html" class="btn">預約掛號</a>
+  <section class="bg-gradient-to-r from-emerald-50 via-blue-50 to-amber-50 py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        溫暖專業的寵物醫療服務
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+        艾新診所致力於為您的毛寶貝提供最優質的醫療照護和健康諮詢
+      </p>
+      <a href="contact.html" class="inline-block bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-emerald-800 transition shadow-lg">
+        立即預約
+      </a>
     </div>
   </section>
 
-  <!-- 關於我們簡介 -->
-  <section class="container">
-    <h2 class="text-center">歡迎來到艾新寵物診所</h2>
-    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">
-      我們相信每隻寵物都值得最好的醫療照護。艾新診所致力於提供溫暖、專業的診療環境，
-      讓你的毛寶貝在舒適中接受最高品質的醫療服務。
-    </p>
-  </section>
-
-  <!-- 服務亮點 -->
-  <section class="container">
-    <h2 class="text-center mb-xl">我們的服務</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>🏥 一般門診</h3>
-        <p>日常健康檢查與各類疾病診療，由經驗豐富的獸醫為你的寵物把脈問診。</p>
-      </div>
-      <div class="card">
-        <h3>💉 疫苗保健</h3>
-        <p>完整的疫苗接種與預防計畫，保護寶貝免於傳染病威脅。</p>
-      </div>
-      <div class="card">
-        <h3>🔪 手術服務</h3>
-        <p>安全專業的外科手術，配備現代化麻醉設備和監測技術。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 患者評價 -->
-  <section class="review-section">
-    <div class="container">
-      <h2 class="text-center mb-xl">患者評價</h2>
-      <div class="card-grid">
-        <div class="review-card">
-          <div class="review-rating">⭐⭐⭐⭐⭐</div>
-          <p>「醫生很細心，寶貝超信任她！」</p>
-          <p style="color: #666; font-size: 0.9rem;">— Amy</p>
+  <!-- Services Overview -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 pb-4 border-b-4 border-emerald-600 inline-block w-full">
+        我們的服務
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Service Card 1 -->
+        <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-xl p-8 shadow-lg hover:shadow-xl transition">
+          <div class="text-5xl mb-6">🏥</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">一般診療</h3>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            專業的全身健康檢查、疾病診斷和治療，為您的毛寶貝提供全面的醫療照護。
+          </p>
         </div>
-        <div class="review-card">
-          <div class="review-rating">⭐⭐⭐⭐⭐</div>
-          <p>「環境舒適，專業溫暖，大推薦！」</p>
-          <p style="color: #666; font-size: 0.9rem;">— David</p>
+        
+        <!-- Service Card 2 -->
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-8 shadow-lg hover:shadow-xl transition">
+          <div class="text-5xl mb-6">💉</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">疫苗接種</h3>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            完整的預防性疫苗計劃，保護寵物免受傳染病威脅，守護寵物健康。
+          </p>
         </div>
-        <div class="review-card">
-          <div class="review-rating">⭐⭐⭐⭐⭐</div>
-          <p>「預約快速，服務周到，感謝照顧！」</p>
-          <p style="color: #666; font-size: 0.9rem;">— Jenny</p>
+        
+        <!-- Service Card 3 -->
+        <div class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-8 shadow-lg hover:shadow-xl transition">
+          <div class="text-5xl mb-6">🔧</div>
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">外科手術</h3>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            由經驗豐富的獸醫執行各類手術，採用先進設備確保安全性和成功率。
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 醫生介紹 -->
-  <section class="container">
-    <h2 class="text-center mb-xl">我們的醫療團隊</h2>
-    <div class="card-grid">
-      <div class="card doctor-card">
-        <div class="doctor-img">👩‍⚕️</div>
-        <h3>陳怡臻 醫生</h3>
-        <p class="specialty">小動物內科專家</p>
-        <p class="experience">台灣大學獸醫系畢業，8年臨床診療經驗</p>
-        <p>擅長內科疾病診療與飼主保健諮詢</p>
-      </div>
-      <div class="card doctor-card">
-        <div class="doctor-img">👨‍⚕️</div>
-        <h3>李明哲 醫生</h3>
-        <p class="specialty">外科手術專家</p>
-        <p class="experience">國立台灣大學獸醫所碩士，10年手術經驗</p>
-        <p>擅長外科手術與牙科護理治療</p>
-      </div>
-      <div class="card doctor-card">
-        <div class="doctor-img">👩‍⚕️</div>
-        <h3>王佩柔 醫生</h3>
-        <p class="specialty">行為諮詢專家</p>
-        <p class="experience">國際認證行為獸醫，6年臨床經驗</p>
-        <p>擅長行為問題諮詢與飼主教育</p>
+  <!-- Patient Reviews Section -->
+  <section class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 pb-4 border-b-4 border-emerald-600 inline-block w-full">
+        患者評價
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Review 1 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-emerald-600">
+          <div class="text-amber-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+          <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+            醫生非常有耐心，詳細解釋了我貓咪的健康狀況。診所環境乾�淨舒適，強烈推薦！
+          </p>
+          <p class="font-semibold text-gray-900">- 李小姐</p>
+          <p class="text-gray-600 text-sm">貓咪主人</p>
+        </div>
+        
+        <!-- Review 2 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-emerald-600">
+          <div class="text-amber-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+          <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+            我的狗狗在這裡進行了手術，恢復得很好。醫護人員尤其專業貼心，五星推薦！
+          </p>
+          <p class="font-semibold text-gray-900">- 王先生</p>
+          <p class="text-gray-600 text-sm">狗狗主人</p>
+        </div>
+        
+        <!-- Review 3 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-emerald-600">
+          <div class="text-amber-400 text-2xl mb-4">⭐⭐⭐⭐⭐</div>
+          <p class="text-gray-700 text-lg mb-6 leading-relaxed">
+            疫苗接種服務很完善，醫生詳細說明了後續照護方式。我很放心把寵物交給他們。
+          </p>
+          <p class="font-semibold text-gray-900">- 陳女士</p>
+          <p class="text-gray-600 text-sm">毛寶貝家長</p>
+        </div>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a href="about.html" class="btn">查看詳細資訊</a>
+  </section>
+
+  <!-- Doctor Team Section -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16 pb-4 border-b-4 border-emerald-600 inline-block w-full">
+        醫療團隊
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <!-- Doctor 1 -->
+        <div class="bg-gradient-to-b from-emerald-50 to-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <div class="text-6xl text-center py-8 bg-emerald-100">👨‍⚕️</div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">陳怡臻</h3>
+            <p class="text-emerald-700 font-semibold text-lg mb-4">首席獸醫</p>
+            <div class="space-y-3">
+              <p class="text-gray-700"><span class="font-semibold">學歷:</span> 國立臺灣大學獸醫系</p>
+              <p class="text-gray-700"><span class="font-semibold">經驗:</span> 15 年臨床經驗</p>
+              <p class="text-gray-700"><span class="font-semibold">專科:</span> 貓科疾病、牙科</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Doctor 2 -->
+        <div class="bg-gradient-to-b from-blue-50 to-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <div class="text-6xl text-center py-8 bg-blue-100">👩‍⚕️</div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">李明哲</h3>
+            <p class="text-emerald-700 font-semibold text-lg mb-4">資深獸醫</p>
+            <div class="space-y-3">
+              <p class="text-gray-700"><span class="font-semibold">學歷:</span> 中興大學獸醫系</p>
+              <p class="text-gray-700"><span class="font-semibold">經驗:</span> 12 年臨床經驗</p>
+              <p class="text-gray-700"><span class="font-semibold">專科:</span> 犬科疾病、外科</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Doctor 3 -->
+        <div class="bg-gradient-to-b from-amber-50 to-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+          <div class="text-6xl text-center py-8 bg-amber-100">👨‍⚕️</div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">楊佳欣</h3>
+            <p class="text-emerald-700 font-semibold text-lg mb-4">獸醫</p>
+            <div class="space-y-3">
+              <p class="text-gray-700"><span class="font-semibold">學歷:</span> 嘉義大學獸醫系</p>
+              <p class="text-gray-700"><span class="font-semibold">經驗:</span> 8 年臨床經驗</p>
+              <p class="text-gray-700"><span class="font-semibold">專科:</span> 行為諮詢、營養</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section style="background: linear-gradient(135deg, var(--primary-light), var(--accent-light)); text-align: center;">
-    <div class="container">
-      <h2 style="color: var(--primary-color); margin-bottom: 1rem;">準備好了嗎？</h2>
-      <p style="font-size: 1.1rem; margin-bottom: 2rem;">預約我們的服務，為你的毛寶貝提供最好的照護</p>
-      <a href="contact.html" class="btn secondary">立即預約</a>
+  <section class="bg-gradient-to-r from-emerald-700 to-emerald-800 py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        準備好關心您的毛寶貝了嗎？
+      </h2>
+      <p class="text-xl text-emerald-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+        立即聯絡我們預約診療，讓我們為您的寵物提供最好的照護
+      </p>
+      <a href="contact.html" class="inline-block bg-white text-emerald-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+        立即預約
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <h4>艾新寵物診所</h4>
-      <p style="margin-bottom: 1rem;">溫暖專業，用心守護每一個毛寶貝</p>
-      <div class="footer-links">
-        <a href="about.html">關於我們</a>
-        <a href="services.html">服務項目</a>
-        <a href="health-tips.html">科普知識</a>
-        <a href="contact.html">聯絡我們</a>
-        <a href="faq.html">常見問題</a>
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <h4 class="text-2xl font-bold mb-4 text-emerald-400">🐾 艾新診所</h4>
+          <p class="text-gray-300 leading-relaxed">
+            溫暖專業，用心守護每一個毛寶貝
+          </p>
+        </div>
+        <div>
+          <h5 class="font-bold text-lg mb-4 text-emerald-300">導航</h5>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-emerald-400 transition">首頁</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-emerald-400 transition">關於我們</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-emerald-400 transition">服務項目</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-lg mb-4 text-emerald-300">知識中心</h5>
+          <ul class="space-y-3">
+            <li><a href="health-tips.html" class="text-gray-300 hover:text-emerald-400 transition">科普知識</a></li>
+            <li><a href="faq.html" class="text-gray-300 hover:text-emerald-400 transition">常見問題</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-emerald-400 transition">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-lg mb-4 text-emerald-300">聯絡資訊</h5>
+          <p class="text-gray-300 mb-2">📞 (02) 2345-6789</p>
+          <p class="text-gray-300 mb-2">📧 info@ailuxin.com</p>
+          <p class="text-gray-300">📍 台北市信義區</p>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 艾新寵物診所。保留所有權利。</p>
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2024 艾新寵物診所。保留所有權利。</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/mobile-menu.js"></script>
-  <script src="js/accordion.js"></script>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>

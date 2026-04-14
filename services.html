@@ -4,194 +4,217 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>服務項目 - 艾新寵物診所</title>
-  <meta name="description" content="艾新寵物診所提供的所有服務項目，包括一般門診、疫苗保健、手術等。">
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <meta name="description" content="艾新寵物診所提供完整的寵物醫療服務。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; font-weight: 700; }
+    .accordion-button { cursor: pointer; user-select: none; transition: all 0.3s ease; }
+    .accordion-button.active { background-color: #ecf0f1; }
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .accordion-content.active { max-height: 500px; }
+  </style>
 </head>
-<body>
-  <!-- Header 導航 -->
-  <header>
-    <nav>
-      <div class="logo">🐾 艾新診所</div>
-      <ul class="nav-menu">
-        <li><a href="index.html">首頁</a></li>
-        <li><a href="about.html">關於我們</a></li>
-        <li><a href="services.html">服務項目</a></li>
-        <li><a href="health-tips.html">科普知識</a></li>
-        <li><a href="contact.html">聯絡我們</a></li>
-      </ul>
-      <button class="mobile-menu-toggle">☰</button>
+<body class="bg-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <div class="text-2xl font-bold text-emerald-700">🐾 艾新診所</div>
+        <ul class="hidden md:flex gap-8 items-center">
+          <li><a href="index.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">首頁</a></li>
+          <li><a href="about.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">關於我們</a></li>
+          <li><a href="services.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">服務項目</a></li>
+          <li><a href="health-tips.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">科普知識</a></li>
+          <li><a href="contact.html" class="text-gray-800 font-medium hover:text-emerald-700 transition">聯絡我們</a></li>
+        </ul>
+        <button class="md:hidden text-2xl text-gray-800" onclick="toggleMobileMenu()">☰</button>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200">
+        <ul class="flex flex-col gap-4 pt-4">
+          <li><a href="index.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">首頁</a></li>
+          <li><a href="about.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">關於我們</a></li>
+          <li><a href="services.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">服務項目</a></li>
+          <li><a href="health-tips.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">科普知識</a></li>
+          <li><a href="contact.html" class="text-gray-800 font-medium hover:text-emerald-700 transition block">聯絡我們</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: linear-gradient(135deg, #d5f4e6, #ffe8d6);">
-    <div class="container">
-      <h1>我們的服務</h1>
-      <p>為你的毛寶貝提供全面的醫療照護</p>
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-emerald-50 to-blue-50 py-20 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">我們的服務</h1>
+      <p class="text-2xl text-gray-700">完整的寵物醫療照護方案</p>
     </div>
   </section>
 
-  <!-- 服務介紹 -->
-  <section class="container">
-    <h2 class="text-center mb-xl">全方位的寵物醫療服務</h2>
-    
-    <!-- Accordion 服務列表 -->
-    <div class="accordion-item active">
-      <div class="accordion-header">
-        <h3 style="margin: 0;">🏥 一般門診</h3>
-      </div>
-      <div class="accordion-content">
-        <p><strong>簡介：</strong>為貓狗提供日常健康檢查、疾病診療與治療。</p>
-        <p><strong>服務內容：</strong></p>
-        <ul style="margin: 1rem 0 1rem 2rem;">
-          <li>常見疾病診治（皮膚病、腸胃問題、呼吸系統等）</li>
-          <li>健康檢查與病史評估</li>
-          <li>整體診療與藥物治療</li>
-          <li>居家護理指導與衛教</li>
-        </ul>
-        <p><strong>預約建議：</strong>建議提前 24 小時預約，緊急情況可當日預約。</p>
-      </div>
-    </div>
+  <!-- Services with Accordion -->
+  <section class="py-20 md:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-6">
+        <!-- Service 1 -->
+        <div class="border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <button class="accordion-button w-full text-left p-8 bg-gradient-to-r from-emerald-50 to-emerald-100 font-semibold text-lg text-gray-900 hover:bg-emerald-200 transition" onclick="toggleAccordion(this)">
+            <span class="text-2xl mr-4">🏥</span>一般診療與健康檢查
+            <span class="float-right text-2xl" style="transform: rotate(0deg); transition: transform 0.3s;">▼</span>
+          </button>
+          <div class="accordion-content bg-white">
+            <div class="p-8 text-gray-700 text-lg space-y-4 leading-relaxed">
+              <p><strong>服務內容：</strong>全身健康檢查、疾病診斷、症狀治療、健康諮詢</p>
+              <p><strong>適合對象：</strong>所有年齡段的貓狗，尤其是老年寵物（每年至少檢查2次）</p>
+              <p><strong>費用參考：</strong>初診檢查 NT$800-1200，後續診療根據病情調整</p>
+              <p><strong>預約建議：</strong>建議提前1-2天預約，一般等候時間15-30分鐘</p>
+            </div>
+          </div>
+        </div>
 
-    <div class="accordion-item">
-      <div class="accordion-header">
-        <h3 style="margin: 0;">💉 疫苗與預防保健</h3>
-      </div>
-      <div class="accordion-content">
-        <p><strong>簡介：</strong>完整的疫苗接種與寶寶寄生蟲預防計畫。</p>
-        <p><strong>服務內容：</strong></p>
-        <ul style="margin: 1rem 0 1rem 2rem;">
-          <li>基礎疫苗接種（DHPP、FRD 等）</li>
-          <li>狂犬病疫苗認證</li>
-          <li>內外寄生蟲預防與治療</li>
-          <li>心絲蟲評估與預防計畫</li>
-          <li>健康檢查套餐</li>
-        </ul>
-        <p><strong>預約建議：</strong>建議每年定期檢查一次，疫苗有效期維護。</p>
-      </div>
-    </div>
+        <!-- Service 2 -->
+        <div class="border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <button class="accordion-button w-full text-left p-8 bg-gradient-to-r from-blue-50 to-blue-100 font-semibold text-lg text-gray-900 hover:bg-blue-200 transition" onclick="toggleAccordion(this)">
+            <span class="text-2xl mr-4">💉</span>疫苗接種與預防保健
+            <span class="float-right text-2xl" style="transform: rotate(0deg); transition: transform 0.3s;">▼</span>
+          </button>
+          <div class="accordion-content bg-white">
+            <div class="p-8 text-gray-700 text-lg space-y-4 leading-relaxed">
+              <p><strong>服務內容：</strong>幼寵基礎疫苗、成年寵物追加針、特殊病病預防針</p>
+              <p><strong>疫苗種類：</strong>貓三合一、狂犬病、狗八合一、狗五合一疫苗</p>
+              <p><strong>費用參考：</strong>單次疫苗接種 NT$400-800</p>
+              <p><strong>注意事項：</strong>接種前須進行健康檢查，接種後24小時避免劇烈運動</p>
+            </div>
+          </div>
+        </div>
 
-    <div class="accordion-item">
-      <div class="accordion-header">
-        <h3 style="margin: 0;">🔪 手術與麻醉</h3>
-      </div>
-      <div class="accordion-content">
-        <p><strong>簡介：</strong>安全專業的外科手術服務，配備現代化麻醉設備。</p>
-        <p><strong>服務內容：</strong></p>
-        <ul style="margin: 1rem 0 1rem 2rem;">
-          <li>結紮/絡育手術</li>
-          <li>腫瘤移除與病理檢查</li>
-          <li>牙科洗牙與牙齒治療</li>
-          <li>其他複雜外科手術</li>
-          <li>術前評估與術後護理</li>
-        </ul>
-        <p><strong>特色：</strong>使用現代麻醉技術，全程生命徵象監測。</p>
-        <p><strong>預約建議：</strong>手術需提前預約，並進行術前檢查評估。</p>
-      </div>
-    </div>
+        <!-- Service 3 -->
+        <div class="border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <button class="accordion-button w-full text-left p-8 bg-gradient-to-r from-amber-50 to-amber-100 font-semibold text-lg text-gray-900 hover:bg-amber-200 transition" onclick="toggleAccordion(this)">
+            <span class="text-2xl mr-4">🔧</span>外科手術與牙科服務
+            <span class="float-right text-2xl" style="transform: rotate(0deg); transition: transform 0.3s;">▼</span>
+          </button>
+          <div class="accordion-content bg-white">
+            <div class="p-8 text-gray-700 text-lg space-y-4 leading-relaxed">
+              <p><strong>手術類型：</strong>节育絕育、腫瘤切除、外傷縫合、骨科手術、牙齒洗淨與拔除</p>
+              <p><strong>使用麻醉：</strong>採用安全的現代麻醉技術，配備監測設備</p>
+              <p><strong>費用參考：</strong>節育手術 NT$3000-6000，根據手術複雜度調整</p>
+              <p><strong>術後照護：</strong>提供詳細術後護理指導與追蹤診療</p>
+            </div>
+          </div>
+        </div>
 
-    <div class="accordion-item">
-      <div class="accordion-header">
-        <h3 style="margin: 0;">🎓 行為諮詢與飼主教育</h3>
-      </div>
-      <div class="accordion-content">
-        <p><strong>簡介：</strong>解決寶寶行為問題，教導飼主正確的照護方式。</p>
-        <p><strong>服務內容：</strong></p>
-        <ul style="margin: 1rem 0 1rem 2rem;">
-          <li>咬人、吠叫等行為問題諮詢</li>
-          <li>飼主養育建議與衛教</li>
-          <li>幼寶社會化指導</li>
-          <li>老年寵物照護建議</li>
-          <li>壓力與焦慮管理</li>
-        </ul>
-        <p><strong>預約建議：</strong>建議預留充足時間（30-60 分鐘），以便充分溝通。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 服務流程 -->
-  <section style="background-color: #ecf0f1;">
-    <div class="container">
-      <h2 class="text-center mb-xl">一般門診流程</h2>
-      <div class="card-grid">
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
-          <h4>1. 預約</h4>
-          <p>電話或 LINE 預約合適的時間</p>
-        </div>
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
-          <h4>2. 報到</h4>
-          <p>到診所報到，填寫寶寶健康資訊</p>
-        </div>
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">👨‍⚕️</div>
-          <h4>3. 看診</h4>
-          <p>獸醫對寶寶進行詳細檢查與診療</p>
-        </div>
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">💊</div>
-          <h4>4. 治療</h4>
-          <p>提供藥物治療與居家護理指導</p>
-        </div>
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">💳</div>
-          <h4>5. 結帳</h4>
-          <p>結帳並預約後續追蹤</p>
-        </div>
-        <div class="card text-center">
-          <div style="font-size: 3rem; margin-bottom: 1rem;">📞</div>
-          <h4>6. 追蹤</h4>
-          <p>定期回診追蹤寶寶恢復狀況</p>
+        <!-- Service 4 -->
+        <div class="border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+          <button class="accordion-button w-full text-left p-8 bg-gradient-to-r from-purple-50 to-purple-100 font-semibold text-lg text-gray-900 hover:bg-purple-200 transition" onclick="toggleAccordion(this)">
+            <span class="text-2xl mr-4">🧠</span>行為諮詢與健康教育
+            <span class="float-right text-2xl" style="transform: rotate(0deg); transition: transform 0.3s;">▼</span>
+          </button>
+          <div class="accordion-content bg-white">
+            <div class="p-8 text-gray-700 text-lg space-y-4 leading-relaxed">
+              <p><strong>诮詢內容：</strong>行為問題分析與改善方案、飼養技巧、營養指導、老年寵物護理</p>
+              <p><strong>適合對象：</strong>有行為問題的寵物、新手飼主、尋求專業指導的飼主</p>
+              <p><strong>費用參考：</strong>諮詢費 NT$600-1000/次，時長30-60分鐘</p>
+              <p><strong>優勢：</strong>幫助飼主更好地理解寵物，改善人寵關係</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 價格說明 -->
-  <section class="container">
-    <h2 class="text-center mb-xl">價格與費用</h2>
-    <p style="text-align: center; margin-bottom: 2rem;">
-      我們提供透明的價格政策。詳細的費用項目，<a href="contact.html">請聯絡我們</a>或來電詢問。
-    </p>
-    <div class="card" style="background: #fff9e6; border-left: 4px solid #ff8c42;">
-      <p style="margin: 0;">
-        <strong>💡 提示：</strong>
-        我們提供多種支付方式，歡迎詢問是否有套餐優惠或健康檢查方案。
-      </p>
+  <!-- Service Process -->
+  <section class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-4xl font-bold text-center text-gray-900 mb-16 pb-4 border-b-4 border-emerald-600 inline-block w-full">服務流程</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
+        <div class="text-center">
+          <div class="text-5xl mb-4 text-emerald-600">1️⃣</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">預約掛號</h3>
+          <p class="text-gray-700">電話預約或線上預約，我們會儘快為您安排時間</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl mb-4 text-emerald-600">2️⃣</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">初步檢查</h3>
+          <p class="text-gray-700">醫護人員進行體溫、脈搏等基本檢查</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl mb-4 text-emerald-600">3️⃣</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">獸醫診療</h3>
+          <p class="text-gray-700">獸醫進行詳細檢查與診斷，必要時進行檢驗</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl mb-4 text-emerald-600">4️⃣</div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">治療護理</h3>
+          <p class="text-gray-700">根據診斷結果提供治療方案與用藥指引</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section style="background-color: #d5f4e6; text-align: center;">
-    <div class="container">
-      <h2 style="color: #2ecc71;">準備好預約我們的服務了嗎？</h2>
-      <a href="contact.html" class="btn">立即聯絡</a>
+  <!-- CTA -->
+  <section class="bg-emerald-700 py-20 md:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">準備預約診療嗎？</h2>
+      <p class="text-xl text-emerald-100 mb-8">我們隨時準備為您的毛寶貝提供最好的照護</p>
+      <a href="contact.html" class="inline-block bg-white text-emerald-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+        立即預約
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <h4>艾新寵物診所</h4>
-      <p style="margin-bottom: 1rem;">溫暖專業，用心守護每一個毛寶貝</p>
-      <div class="footer-links">
-        <a href="index.html">首頁</a>
-        <a href="about.html">關於我們</a>
-        <a href="services.html">服務項目</a>
-        <a href="health-tips.html">科普知識</a>
-        <a href="contact.html">聯絡我們</a>
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <h4 class="text-2xl font-bold mb-4 text-emerald-400">🐾 艾新診所</h4>
+          <p class="text-gray-300 leading-relaxed">溫暖專業，用心守護每一個毛寶貝</p>
+        </div>
+        <div>
+          <h5 class="font-bold text-lg mb-4 text-emerald-300">導航</h5>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-300 hover:text-emerald-400 transition">首頁</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-emerald-400 transition">關於我們</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-emerald-400 transition">服務項目</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-lg mb-4 text-emerald-300">知識中心</h5>
+          <ul class="space-y-3">
+            <li><a href="health-tips.html" class="text-gray-300 hover:text-emerald-400 transition">科普知識</a></li>
+            <li><a href="faq.html" class="text-gray-300 hover:text-emerald-400 transition">常見問題</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-emerald-400 transition">聯絡我們</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-lg mb-4 text-emerald-300">聯絡資訊</h5>
+          <p class="text-gray-300 mb-2">📞 (02) 2345-6789</p>
+          <p class="text-gray-300 mb-2">📧 info@ailuxin.com</p>
+          <p class="text-gray-300">📍 台北市信義區</p>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2024 艾新寵物診所。保留所有權利。</p>
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2024 艾新寵物診所。保留所有權利。</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/mobile-menu.js"></script>
-  <script src="js/accordion.js"></script>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+    
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const arrow = button.querySelector('span:last-child');
+      
+      button.classList.toggle('active');
+      content.classList.toggle('active');
+      arrow.style.transform = button.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+  </script>
 </body>
 </html>
