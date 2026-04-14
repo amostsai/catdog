@@ -1,0 +1,73 @@
+/* ====================================
+   CSS 變數 - 色彩、字體、間距
+   ==================================== */
+
+:root {
+  /* 主色彩 */
+  --primary-color: #2ecc71;         /* 醫療綠 */
+  --primary-dark: #27ae60;          /* 深綠 */
+  --primary-light: #d5f4e6;         /* 淡綠背景 */
+  
+  /* 輔助色彩 */
+  --accent-color: #ff8c42;          /* 溫暖橙 */
+  --accent-light: #ffe8d6;          /* 淡橙背景 */
+  --accent-dark: #e67e22;           /* 深橙 */
+  
+  /* 中性色彩 */
+  --dark-gray: #2c3e50;             /* 深灰/字色 */
+  --medium-gray: #7f8c8d;           /* 中灰/副文本 */
+  --light-gray: #ecf0f1;            /* 淡灰/背景 */
+  --white: #ffffff;
+  
+  /* 狀態色 */
+  --success: #27ae60;
+  --warning: #f39c12;
+  --error: #e74c3c;
+  --info: #3498db;
+  
+  /* 字體 */
+  --font-heading: 'Poppins', 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', 'Roboto', sans-serif;
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  
+  /* 間距 */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* 陰影 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.2);
+  
+  /* 邊角圓角 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-full: 9999px;
+  
+  /* 過渡效果 */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* 斷點 (Breakpoint) */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-wide: 1200px;
+  
+  /* Z-index 層級 */
+  --z-dropdown: 100;
+  --z-sticky: 50;
+  --z-fixed: 1000;
+  --z-modal: 2000;
+}
